@@ -21,6 +21,7 @@ import base64
 # pipreqs /home/project/location
 
 api_key = "AIzaSyCThqVv2000rW8LTPH80_5_i9AhqJAsM70"
+@st.cache  # 👈 Added this
 def comment_comb(api_key, video_id):
     """
     Get all comments from a video
@@ -57,12 +58,14 @@ def comment_comb(api_key, video_id):
         dat = pd.DataFrame(columns=['Video_ID', 'Comment'])
     return dat
 
+@st.cache  # 👈 Added this
 def convert_english_to_french(text):
 
     translator = Translator()
     output = translator.translate(text, dest ='fr').text
     return output
 
+@st.cache  # 👈 Added this
 def filedownload(df):
     # path = str(Name) + str('comments.csv')
     csv = df.to_csv(index=False)
