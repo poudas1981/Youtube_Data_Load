@@ -72,7 +72,7 @@ def filedownload(df):
     return href2, href
 
 path = 'https://github.com/poudas1981/Youtube_Data_Load/blob/main/dataset_analysis_raw.csv'
-path2 = 'C://Users//merli//Desktop//python_code//dataset//Equinox//dataset_analysis_raw.csv'
+path2 = 'https://github.com/poudas1981/Youtube_Data_Load/blob/main/dataset_analysis_raw.csv?raw=true'
 dataset = pd.read_csv(path2)
 st.sidebar.header('User Input Features')
 option = st.sidebar.selectbox(
