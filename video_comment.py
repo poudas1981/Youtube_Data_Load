@@ -71,8 +71,9 @@ def filedownload(df):
     href2 = f'<a href="data:file/txt;base64,{b64}" download= "commentaires.txt"> Download txt File</a>'
     return href2, href
 
-path = 'https://github.com/poudas1981/Youtube_Data_Load/blob/main/dataset_analy_raw.csv'
-dataset = pd.read_csv(path)
+path = 'https://github.com/poudas1981/Youtube_Data_Load/blob/main/dataset_analysis_raw.csv'
+path2 = 'C://Users//merli//Desktop//python_code//dataset//Equinox//dataset_analysis_raw.csv'
+dataset = pd.read_csv(path2)
 st.sidebar.header('User Input Features')
 option = st.sidebar.selectbox(
     'What do you want to do?',
