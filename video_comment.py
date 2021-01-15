@@ -17,7 +17,8 @@ from googletrans import Translator
 import time
 import base64
 
-
+# pip install pipreqs
+# pipreqs /home/project/location
 
 api_key = "AIzaSyCThqVv2000rW8LTPH80_5_i9AhqJAsM70"
 def comment_comb(api_key, video_id):
@@ -69,8 +70,8 @@ def filedownload(df):
     href = f'<a href="data:file/csv;base64,{b64}" download= "commentaires.csv"> Download CSV File</a>'
     href2 = f'<a href="data:file/txt;base64,{b64}" download= "commentaires.txt"> Download txt File</a>'
     return href2, href
-
-dataset = pd.read_csv('C://Users//merli//Desktop//python_code//dataset//Equinox//dataset_analy_raw.csv')
+path = 'https://github.com/poudas1981/Youtube_Data_Load/pulls'
+dataset = pd.read_csv(path)
 st.sidebar.header('User Input Features')
 option = st.sidebar.selectbox(
     'What do you want to do?',
