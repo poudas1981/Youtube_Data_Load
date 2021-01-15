@@ -70,7 +70,8 @@ def filedownload(df):
     href = f'<a href="data:file/csv;base64,{b64}" download= "commentaires.csv"> Download CSV File</a>'
     href2 = f'<a href="data:file/txt;base64,{b64}" download= "commentaires.txt"> Download txt File</a>'
     return href2, href
-path = 'https://github.com/poudas1981/Youtube_Data_Load/pulls'
+
+path = 'https://github.com/poudas1981/Youtube_Data_Load/blob/main/dataset_analy_raw.csv'
 dataset = pd.read_csv(path)
 st.sidebar.header('User Input Features')
 option = st.sidebar.selectbox(
