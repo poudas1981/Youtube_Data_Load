@@ -84,10 +84,10 @@ if option == 'Download comment':
     video_id = st.text_input('Input a new video ID', value='kQDxmjfkIKY', max_chars=None, key=None, type='default')
     if st.checkbox('show the first 5 rows of the comment'):
         comment_data = comment_comb(api_key, video_id)
-        comment_data2 = comment_data[['ID', 'Video_ID', 'comment_fr', 'Name', 'Target']]
+        # comment_data2 = comment_data[['ID', 'Video_ID', 'comment_fr', 'Name', 'Target']]
         st.write(comment_data.head())
         dead = comment_data.head()
-        st.markdown(filedownload(comment_data2),  unsafe_allow_html=True)
+        st.markdown(filedownload(comment_data),  unsafe_allow_html=True)
 elif option == 'Classify comments?':
     st.title('Sentiment Analysis')
     Name = st.sidebar.selectbox('Select your name',
